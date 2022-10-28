@@ -277,7 +277,7 @@ body._lock {
   right: 0;
   background-color: var(--color-0);
   padding: 15px;
-  min-width: 150px;
+  min-width: 155px;
   border-radius: 8px;
 }
 .menu__sub-list > li {
