@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -22,6 +22,9 @@
 
 <body>
     <div class="wrapper">
+
+
+
         <header class="header">
 
             <!-- progress-bar -->
@@ -42,44 +45,44 @@
 
                         <!-- menu -->
                         <div class="header__menu menu">
-                            <div class="menu__icon">
+                            <button name="burger" class="menu__icon">
                                 <span></span>
-                            </div>
+                            </button>
                         </div>
 
                         <!-- menu -->
                         <nav class="menu__body">
                             <ul class="menu__list">
 
-                                <li><a data-goto=".one" href="#" class="menu__link">Главная</a>
+                                <li class="menu__link">
+                                    <a data-goto=".one" href="#">
+                                        Главная
+                                    </a>
+                                </li>
+
+                                <li class="menu__link">
+                                    <a href="#">Портфолио</a>
                                     <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
-                                        <li><a href="" class="menu__sub-link">Сайты</a></li>
+                                        <li class="menu__sub-link"><a href="#">Сайты</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a href="" class="menu__link">Портфолио</a>
+                                <li class="menu__link"><a data-goto=".three" href="#">Стоимость</a>
                                     <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
-                                        <li><a href="" class="menu__sub-link">Сайты</a></li>
-                                        <li><a href="" class="menu__sub-link">Логотипы</a></li>
-                                        <li><a href="" class="menu__sub-link">Графика</a></li>
+                                        <li class="menu__sub-link"><a href="#">Узнать стоимость</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a data-goto=".three" href="#" class="menu__link">Стоимость</a>
+                                <li class="menu__link"><a data-goto=".footer" href="#">Контакты</a>
                                     <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
-                                        <li><a href="" class="menu__sub-link">Сайты</a></li>
-                                        <li><a href="" class="menu__sub-link">Логотипы</a></li>
-                                    </ul>
-                                </li>
-
-                                <li><a data-goto=".footer" href="" class="menu__link">Контакты</a>
-                                    <span class="menu__arrow"></span>
-                                    <ul class="menu__sub-list">
-                                        <li><a href="" class="menu__sub-link">Сайты</a></li>
-                                        <li><a href="" class="menu__sub-link">Логотипы</a></li>
+                                        <li class="menu__sub-link"><a href="#">email</a></li>
+                                        <li class="menu__sub-link"><a href="#">telegram</a></li>
+                                        <li class="menu__sub-link"><a href="#">vk</a></li>
+                                        <li class="menu__sub-link"><a href="#">facebook</a></li>
+                                        <li class="menu__sub-link"><a href="#">instagram</a></li>
 
                                     </ul>
                                 </li>
@@ -160,7 +163,7 @@
         </footer>
     </div>
 
-    <!-- script.js -->
+    <!-- script -->
     <script src="./assets/js/script.js"></script>
 </body>
 

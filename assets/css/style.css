@@ -61,7 +61,7 @@
   --color-4: #ffe492;
   --color-5: #a7cefc;
   --color-6: #212529;
-
+  --color-7: #ffbf00;
   /* text ------------------------------ */
   --font-family: "Inter", sans-serif;
 }
@@ -80,11 +80,6 @@
 
 :focus,
 :active {
-  outline: none;
-}
-
-a:focus,
-a:active {
   outline: none;
 }
 
@@ -122,6 +117,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background: none;
 }
 
 button::-moz-focus-inner {
@@ -207,7 +203,7 @@ body._lock {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 50;
+  z-index: 55;
 }
 
 #header__container {
@@ -218,11 +214,13 @@ body._lock {
 
 /* progress-bar ------------------------------ */
 .progress-container {
+  z-index: 999999;
   width: 100%;
   height: 2px;
 }
 
 .progress-bar {
+  z-index: 999999;
   height: 2px;
   background: var(--color-0);
   width: 0%;
@@ -265,13 +263,13 @@ body._lock {
   position: relative;
   margin: 0px 71px 0px 0px;
 }
-.menu__link {
+.menu__link > a {
   color: var(--color-0);
   font-size: 18px;
 }
-.menu__link:hover {
+.menu__link > a:hover {
   text-decoration: none;
-  color: var(--color-4);
+  color: var(--color-7);
 }
 .menu__sub-list {
   position: absolute;
@@ -288,12 +286,12 @@ body._lock {
 .menu__sub-list li:last-child {
   margin: 0;
 }
-.menu__sub-link {
+.menu__sub-link > a {
   color: var(--color-6);
 }
-.menu__sub-link:hover {
+.menu__sub-link > a:hover {
   text-decoration: none;
-  color: var(--color-4);
+  color: var(--color-7);
 }
 .menu__arrow {
   display: none;
@@ -308,7 +306,7 @@ body._touch .menu__list > li {
   display: flex;
   align-items: center;
 }
-body._touch .menu__link {
+body._touch .menu__link > a {
   flex: 1 1 auto;
 }
 body._touch .menu__arrow {
@@ -369,36 +367,14 @@ body._touch .menu__list > li._active .menu__arrow {
   height: 6px;
 }
 
-.language__arrow:hover {
-  color: var(--color-4);
-}
-
 /* section page ------------------------------ */
 .page {
   flex: 1 1 auto;
 }
+
 .page__main-block {
 }
-.page__services {
-  position: relative;
-  z-index: 2;
-  margin: -111px 0px 0px 0px;
-}
-.page__advantages {
-}
-.page__practice {
-}
-.page__whoweare {
-}
-.page__clients:not(:last-child) {
-  margin: 0px 0px 10px 0px;
-}
-.page__subscribe {
-}
-.page__getintouch {
-}
-.page__contact {
-}
+
 .header-block {
   text-align: center;
   letter-spacing: 0.2px;
@@ -409,9 +385,11 @@ body._touch .menu__list > li._active .menu__arrow {
   font-size: 40px;
   color: var(--color-white);
 }
+
 .header-block__title:not(:last-child) {
   margin: 0px 0px 10px 0px;
 }
+
 .header-block__sub-title {
   font-weight: 500;
   line-height: 142%;
@@ -488,7 +466,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .main-block__button:hover {
-  background: var(--color-4);
+  background: var(--color-7);
   transition: all 0.3s ease 0s;
 }
 .main-block__button_orange {
@@ -593,22 +571,26 @@ body._touch .menu__list > li._active .menu__arrow {
     overflow: auto;
   }
 
+  .menu__body::-webkit-scrollbar {
+    width: 0;
+  }
+
   .menu__body._active {
     left: 0;
     background-color: var(--color-2);
     transition: all 0.3s ease 0s;
   }
 
-  .menu__body::before {
+  /* .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 0px;
     left: 0;
     height: 92px;
     background-color: var(--color-2);
-    z-index: 52;
-  }
+    z-index: 50;
+  } */
 
   .menu__list > li {
     flex-wrap: wrap;
@@ -623,7 +605,7 @@ body._touch .menu__list > li._active .menu__arrow {
     display: block;
   }
 
-  .menu__link {
+  .menu__link > a {
     font-size: 24px;
   }
 
