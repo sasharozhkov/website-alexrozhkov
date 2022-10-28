@@ -28,9 +28,9 @@
         <header class="header">
 
             <!-- progress-bar -->
-            <div class="progress-container">
+            <!-- <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
-            </div>
+            </div> -->
 
             <div id="header__container" class="_container">
 
@@ -62,10 +62,10 @@
 
                                 <li class="menu__link">
                                     <a href="#">Портфолио</a>
-                                    <span class="menu__arrow"></span>
+                                    <!-- <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
                                         <li class="menu__sub-link"><a href="#">Сайты</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
 
                                 <li class="menu__link"><a data-goto=".three" href="#">Стоимость</a>
@@ -78,18 +78,24 @@
                                 <li class="menu__link"><a data-goto=".footer" href="#">Контакты</a>
                                     <span class="menu__arrow"></span>
                                     <ul class="menu__sub-list">
-                                        <li class="menu__sub-link"><a href="#">почта</a></li>
-                                        <li class="menu__sub-link"><a href="#">телеграм</a></li>
-                                        <li class="menu__sub-link"><a href="#">вконтакте</a></li>
-                                        <li class="menu__sub-link"><a href="#">фейсбук</a></li>
-                                        <li class="menu__sub-link"><a href="#">инстаграм</a></li>
+                                        <li class="menu__sub-link"><a href="mailto:alexander_rozhkov@icloud.com"
+                                                target="_blank">Почта</a></li>
+                                        <li class="menu__sub-link"><a href="https://t.me/AlexanderRozhkov"
+                                                target="_blank">Телеграм</a></li>
+                                        <li class="menu__sub-link"><a href="https://vk.com/alexrozhkovcom"
+                                                target="_blank">Вконтакте</a></li>
+                                        <li class="menu__sub-link"><a href="https://www.facebook.com/alexrozhkovcom"
+                                                target="_blank">Фейсбук</a></li>
+                                        <li class="menu__sub-link"><a href="https://www.instagram.com/alexrozhkovcom"
+                                                target="_blank">Инстаграм</a></li>
+                                        <li class="menu__sub-link"><a href="https://twitter.com/alexrozhkovcom"
+                                                target="_blank">Твиттер</a></li>
 
                                     </ul>
                                 </li>
 
                             </ul>
                         </nav>
-
                     </div>
 
                     <!-- change language -->
@@ -104,14 +110,12 @@
                                 Русский
                             </div>
 
-                            <div class="language__arrow">
+                            <!-- <div class="language__arrow">
                                 <img src="./assets/img/header/language/language_arrow.svg" alt="language_arrow">
-                            </div>
+                            </div> -->
                         </a>
 
                     </div>
-
-
                 </div>
             </div>
         </header>
@@ -134,10 +138,21 @@
 
                             <div class="main-block__buttons">
 
-                                <button title="Обсудить проект" class="main-block__button main-block__button_orange"
-                                    type="button">
-                                    Обсудить Проект
-                                </button>
+                                <form formaction="mailto:alexander_rozhkov@icloud.com" target="_blank">
+                                    <button title="Обсудить проект" class="main-block__button main-block__button_blue"
+                                        type="button">
+                                        Обсудить проект
+
+                                        <svg class="main-block__button_icon" width="11" height="11" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 11">
+                                            <path d="M1 5.5H11" stroke="white" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M6 0.5L11 5.5L6 10.5" stroke="white" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+
+                                    </button>
+                                </form>
 
                             </div>
 
