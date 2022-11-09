@@ -471,6 +471,12 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .main-block__right {
   text-align: center;
+  transform: scale(0);
+  transition: all 1.5s ease 0s;
+}
+
+.main-block__right._active {
+  transform: scale(1);
 }
 
 #slider {
@@ -544,6 +550,14 @@ img {
   font-size: 64px;
   line-height: 77px;
   letter-spacing: -0.02em;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__title._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 
 .main-block__text {
@@ -553,11 +567,29 @@ img {
   line-height: 167%;
   letter-spacing: -0.02em;
   margin: 0px 0px 60px 0px;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__text._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.4s;
 }
 
 .main-block__buttons {
   display: flex;
   margin: 0;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+
+.main-block__buttons._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.8s;
 }
 
 .main-block__image {
