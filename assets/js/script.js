@@ -84,8 +84,6 @@ if (menuLinks.length > 0) {
     }
 }
 
-
-
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -108,7 +106,6 @@ if (animItems.length > 0) {
                 if (!animItem.classList.contains('_anim-no-hide')) {
                     animItem.classList.remove('_active');
                 }
-
             }
         }
     }
