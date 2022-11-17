@@ -23,7 +23,7 @@ const langArr = {
     },
 
     "down-price": {
-        "ru": "Узнать стоимость",
+        "ru": "Стоимость",
         "en": "Price",
     },
 
