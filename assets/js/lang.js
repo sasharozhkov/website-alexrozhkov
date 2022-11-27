@@ -7,11 +7,6 @@ const langArr = {
         "en": "alexrozhkov.com - website development and maintenance",
     },
 
-    "home": {
-        "ru": "Главная",
-        "en": "Home",
-    },
-
     "portfolio": {
         "ru": "Портфолио",
         "en": "Portfolio",
@@ -20,6 +15,11 @@ const langArr = {
     "price": {
         "ru": "Стоимость",
         "en": "Price",
+    },
+
+    "book": {
+        "ru": "Учебник",
+        "en": "Book",
     },
 
     "down-price": {

@@ -1,5 +1,43 @@
 "user strict";
 
+// change language
+const select = document.querySelector('select');
+const allLang = ['ru', 'en'];
+
+select.addEventListener('change', changeURLLanguage);
+
+// перенапровление на url с указанием языка
+function changeURLLanguage() {
+    let lang = select.value;
+    location.href = window.location.pathname + '#' + lang;
+    location.reload();
+}
+
+function changeLanguage() {
+    let hash = window.location.hash;
+    hash = hash.substr(1);
+    console.log(hash);
+    if (!allLang.includes(hash)) {
+        location.href = window.location.pathname + '#ru';
+        location.reload();
+    }
+    select.value = hash;
+    document.querySelector('title').innerHTML = langArr['title'][hash];
+    // document.querySelector('.lng-home').innerHTML = langArr['home'][hash];
+
+    for (let key in langArr) {
+        let elem = document.querySelector('.lng-' + key);
+        if (elem) {
+            elem.innerHTML = langArr[key][hash];
+        }
+    }
+}
+
+changeLanguage();
+// end change language
+
+// ===================================================
+
 // проверяем какой телефон используется
 const isMobile = {
     Android: function () {
@@ -44,6 +82,8 @@ if (isMobile.any()) {
     document.body.classList.add('_pc');
 }
 
+// ===================================================
+
 /* burger menu*/
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
@@ -54,6 +94,8 @@ if (iconMenu) {
         menuBody.classList.toggle('_active');
     });
 }
+
+// ===================================================
 
 /* scroll to click */
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
@@ -123,45 +165,3 @@ if (animItems.length > 0) {
     }, 500)
 
 }
-
-// ===================================================
-
-// change language
-const select = document.querySelector('select');
-const allLang = ['ru', 'en'];
-
-select.addEventListener('change', changeURLLanguage);
-
-// перенапровление на url с указанием языка
-function changeURLLanguage() {
-    let lang = select.value;
-    location.href = window.location.pathname + '#' + lang;
-    location.reload();
-}
-
-function changeLanguage() {
-    let hash = window.location.hash;
-    hash = hash.substr(1);
-    console.log(hash);
-    if (!allLang.includes(hash)) {
-        location.href = window.location.pathname + '#ru';
-        location.reload();
-    }
-    select.value = hash;
-    document.querySelector('title').innerHTML = langArr['title'][hash];
-    // document.querySelector('.lng-home').innerHTML = langArr['home'][hash];
-
-    for (let key in langArr) {
-        let elem = document.querySelector('.lng-' + key);
-        if (elem) {
-            elem.innerHTML = langArr[key][hash];
-        }
-
-
-    }
-}
-
-changeLanguage();
-
-
-
